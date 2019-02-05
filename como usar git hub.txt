@@ -1,0 +1,8 @@
+
+
+1: git clone Repo
+2: git add .
+3: git commit -m "Comentario del commit"
+4: git push
+5: ingresar usuario y contraseña
+usar flechas para cambiar comandos (se guardan)
