@@ -5,6 +5,9 @@
 function mostrar()
 {
 	var dato=prompt("Ingresar dato");
-	elNombre.value=dato;
+	//elNombre.value=dato;
+
+	document.getElementById("elNombre").value=dato;
+
 }
 
