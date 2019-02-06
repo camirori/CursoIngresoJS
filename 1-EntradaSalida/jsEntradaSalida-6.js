@@ -3,10 +3,19 @@ transformarlos a enteros (parseInt) y Sumarlos.
 mostrar el resulto por medio de "ALERT"*/
 function sumar()
 {
-	var numUno=numeroUno.value;
-	var numDos=numeroDos.value;
-	numUno=parseInt(numUno);
-	numDos=parseInt(numDos);
-	alert("La suma es "+(numUno+numDos));
+	var primerNumero;
+	var segundoNumero;
+	var suma;
+
+	primerNumero=numeroUno.value;
+	segundoNumero=numeroDos.value;
+	primerNumero=parseInt(primerNumero);
+	segundoNumero=parseInt(segundoNumero);
+
+	//alert("La suma es "+(primerNumero+segundoNumero));
+
+	suma=primerNumero+segundoNumero;
+	
+	alert("La suma es "+suma);
 }
 
