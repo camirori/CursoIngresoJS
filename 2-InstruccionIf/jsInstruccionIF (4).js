@@ -12,6 +12,14 @@ function mostrar()
 		alert("Usted es adolescente");
 	}
 
-
+/*	if(edadIngresada>12)
+	{
+		if(edadIngresada<18)
+		{
+			alert("Usted es adolescente");
+		}
+		
+	}
+*/
 
 }//FIN DE LA FUNCIÓN
