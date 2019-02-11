@@ -1,12 +1,14 @@
 function mostrar()
 {
 //tomo la edad  
-	var vEdad=edad.value;
-	vEdad=parseInt(vEdad);
+	var edadIngresada=edad.value;
+	edadIngresada=parseInt(edadIngresada);
 
 
-	if(vEdad>=18)
-		{alert("Mayor de edad");}	
+	if(edadIngresada>=18)
+	{
+		alert("Mayor de edad");
+	}
 
 
 }//FIN DE LA FUNCIÓN
