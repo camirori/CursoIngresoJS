@@ -5,7 +5,7 @@ function mostrar()
 	edadIngresada=parseInt(edadIngresada);
 
 
-	if(edadIngresada>=18)
+	if(edadIngresada>17)
 	{
 		alert("Mayor de edad");
 	}
