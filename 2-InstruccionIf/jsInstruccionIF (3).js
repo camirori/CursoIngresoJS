@@ -2,7 +2,7 @@ function mostrar()
 {
 //tomo la edad  
 	var edadIngresada;
-	
+
 	edadIngresada=edad.value;
 	edadIngresada=parseInt(edadIngresada);
 
@@ -15,5 +15,10 @@ function mostrar()
 	{
 		alert("Menor de edad");
 	}
+
+	/*if(edadIngresada<18)
+	{
+		alert("Menor de edad");
+	}*/
 
 }//FIN DE LA FUNCIÓN
