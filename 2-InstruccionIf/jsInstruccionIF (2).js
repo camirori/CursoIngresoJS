@@ -1,7 +1,9 @@
 function mostrar()
 {
 //tomo la edad  
-	var edadIngresada=edad.value;
+	var edadIngresada;
+
+	edadIngresada=edad.value;
 	edadIngresada=parseInt(edadIngresada);
 
 
