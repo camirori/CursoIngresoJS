@@ -3,20 +3,20 @@ function mostrar()
 //tomo la edad  
 	var edadIngresada;
 	edadIngresada=edad.value;
-	//vEdad=parseInt(vEdad); no es necesario
+	edadIngresada=parseInt(edadIngresada); 
 
 
-	if(edadIngresada>=18)
+	if(edadIngresada>17)
 	{	
 		alert("Usted es mayor de edad");
 	}
-	else if(edadIngresada>=13&&edadIngresada<=17)
+	else if(edadIngresada<13)
 	{
-		alert("Usted es adolescente");	
+		alert("Usted es un niño");	
 	}
 	else
 	{	
-		alert("Usted es un niño");
+		alert("Usted es adolescente");
 	}
 
 }//FIN DE LA FUNCIÓN
