@@ -7,32 +7,53 @@ function mostrar()
 	var cantidadProductos;
 	var montoCompra;
 	var medioPago;
+	var descuentoCantidad;
+	var descuentoMonto;
+	var sobrecargoMedio;
+	var precioFinal;
+	
 
 	cantidadProductos=prompt("Cuàntos productos ha comprado?");
-	cantidadProductos=parseInt(cantidadProductos);
 	montoCompra=prompt("Cuàl es el monto de su compra?");
-	montoCompra=parseInt(montoCompra);	
 	medioPago=prompt("Ha abonado mediante tarjeta (t) o efectivo (e)?")
+	
+	cantidadProductos=parseInt(cantidadProductos);
+	montoCompra=parseInt(montoCompra);	
 
 
 	if (cantidadProductos>2) 
 	{
-		montoCompra=montoCompra*0.9;
+		descuentoCantidad=montoCompra*0.1;
 
 		if (montoCompra>2000) 
 		{
-			montoCompra=montoCompra*0.85;
+			descuentoMonto=montoCompra*0.15;
 		}
+		else
+		{
+			descuentoMonto=0;
+		}
+	}
+	else
+	{
+		descuentoCantidad=0;
+		descuentoMonto=0;
 	}
 
 	if (medioPago=="t") 
 	{
-		montoCompra=montoCompra*1.1;
+		sobrecargoMedio=(montoCompra-descuentoCantidad-descuentoMonto)*0.1;
+	}
+	else
+	{
+		sobrecargoMedio=0;
 	}
 
-	montoCompra=Math.round(montoCompra);
+	precioFinal=montoCompra-descuentoCantidad-descuentoMonto+sobrecargoMedio;
+	precioFinal=Math.round(precioFinal);
+	/* agregaria mas informacion  al mensaje , cantidad , precio sin descuento y el final*/
 
-	alert("El monto final de su compra es de $"+montoCompra);
+	alert("El monto incial de su compra es $"+montoCompra+" y ha comprado "+cantidadProductos+" producto/s. El descuento por cantidad es $"+descuentoCantidad+", el descuento por monto es $"+descuentoMonto+", el sobrecargo por medio de pago es $"+sobrecargoMedio+". El monto final de su compra es de $"+precioFinal);
 
 
 }
