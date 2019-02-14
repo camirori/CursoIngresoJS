@@ -15,8 +15,8 @@ function mostrar()
 
 	cantidadProductos=prompt("Cuàntos productos ha comprado?");
 	montoCompra=prompt("Cuàl es el monto de su compra?");
-	medioPago=prompt("Ha abonado mediante tarjeta (t) o efectivo (e)?")
-	
+	medioPago=prompt("Ha abonado mediante tarjeta (t) o efectivo (e)?");
+
 	cantidadProductos=parseInt(cantidadProductos);
 	montoCompra=parseInt(montoCompra);	
 
@@ -51,6 +51,7 @@ function mostrar()
 
 	precioFinal=montoCompra-descuentoCantidad-descuentoMonto+sobrecargoMedio;
 	precioFinal=Math.round(precioFinal);
+	
 	/* agregaria mas informacion  al mensaje , cantidad , precio sin descuento y el final*/
 
 	alert("El monto incial de su compra es $"+montoCompra+" y ha comprado "+cantidadProductos+" producto/s. El descuento por cantidad es $"+descuentoCantidad+", el descuento por monto es $"+descuentoMonto+", el sobrecargo por medio de pago es $"+sobrecargoMedio+". El monto final de su compra es de $"+precioFinal);
