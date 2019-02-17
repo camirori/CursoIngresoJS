@@ -4,7 +4,7 @@ function mostrar()
 	los $2000 se agrega undescuento adicional de 15%, si el pago es con tarjeta y no efectivo al precio final 
 	se le agrega un 10% de recargo*/
 
-	var cantidadProductos;
+	/*var cantidadProductos;
 	var montoCompra;
 	var medioPago;
 	var descuentoCantidad;
@@ -50,11 +50,45 @@ function mostrar()
 	}
 
 	precioFinal=montoCompra-descuentoCantidad-descuentoMonto+sobrecargoMedio;
-	precioFinal=Math.round(precioFinal);
+	precioFinal=Math.round(precioFinal);/*
 	
 	/* agregaria mas informacion  al mensaje , cantidad , precio sin descuento y el final*/
 
+	/*
 	alert("El monto incial de su compra es $"+montoCompra+" y ha comprado "+cantidadProductos+" producto/s. El descuento por cantidad es $"+descuentoCantidad+", el descuento por monto es $"+descuentoMonto+", el sobrecargo por medio de pago es $"+sobrecargoMedio+". El monto final de su compra es de $"+precioFinal);
+	*/
 
+	var respuesta;
+	var primerNumeroIngresado;
+	var segundoNumeroIngresado;
+
+	primerNumeroIngresado=prompt("Ingrese un número");
+	segundoNumeroIngresado=prompt("Ingrese otro número");
+
+	primerNumeroIngresado=parseInt(primerNumeroIngresado);
+	segundoNumeroIngresado=parseInt(segundoNumeroIngresado);
+
+	if(primerNumeroIngresado==segundoNumeroIngresado)	
+	{
+		alert("Los números ingresados son "+primerNumeroIngresado+" y "+segundoNumeroIngresado);
+	}
+	else if(primerNumeroIngresado>segundoNumeroIngresado)
+	{
+		respuesta=primerNumeroIngresado-segundoNumeroIngresado;
+		alert("La resta es "+respuesta);
+	}
+	else
+	{
+		respuesta=primerNumeroIngresado+segundoNumeroIngresado;
+		if (respuesta>10) 
+		{
+			alert("La suma es "+respuesta+" y superó el 10");
+		}
+		else
+		{
+			alert("La suma es "+respuesta);
+		}
+		
+	}
 
 }
