@@ -1,32 +1,25 @@
 function mostrar()
 {
 	var mesDelAño = document.getElementById('mes').value;
+	var dias;
 
 		switch(mesDelAño)
 		{
-			case "Enero":
-			case "Marzo":
-			case "Mayo":
-			case "Julio":
-			case "Agosto":
-			case "Octubre":
-			case "Diciembre":
-
-				alert("El mes tiene 31 días")
-				break;
-
 			case "Abril":
 			case "Junio":
 			case "Septiembre":
 			case "Noviembre":
-				alert("El mes tiene 30 días")
+				dias=30;
 				break;
-
 			case "Febrero":
-				alert("El mes tiene 28 días")
+				dias=28;
 				break;
-
+			default:
+				dias=31;
+				break;
 		}
+
+	alert("El mes tiene "+dias+" días");
 	
 	
 
