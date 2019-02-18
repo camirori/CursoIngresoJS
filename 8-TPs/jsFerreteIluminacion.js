@@ -22,51 +22,44 @@ function CalcularPrecio ()
 
  	switch (cantidad)
  	{
- 		case 5:
- 		{
+ 		case 5: 		
  			if(marca=="ArgentinaLuz")
  			{
  				importe=precio*cantidad*0.6;
- 				break;
  			}
  			else
  			{
  				importe=precio*cantidad*0.7;
- 				break;
  			}
- 		}
-
+			break;
  		case 4:
  		{
  			if(marca=="ArgentinaLuz"||marca=="FelipeLamparas")
  			{
  				importe=precio*cantidad*0.75;
- 				break;
  			}
  			else
  			{
  				importe=precio*cantidad*0.8;
- 				break;
  			}
- 		}
+ 			break;
+ 		} 			
 
  		case 3:
  		{
  			if(marca=="ArgentinaLuz")
  			{
  				importe=precio*cantidad*0.85;
- 				break;
  			}
  			else if(marca=="FelipeLamparas")
  			{
  				importe=precio*cantidad*0.9;
- 				break;
  			}
  			else
  			{
  				importe=precio*cantidad*0.95;
- 				break;
  			}
+ 			break;
  		}
  		case 1:
  		case 2:
@@ -81,8 +74,6 @@ function CalcularPrecio ()
  		}
  	}
 
-
-
  	if (importe>120)
  	{
  		IIBB=importe*0.1;
@@ -91,6 +82,5 @@ function CalcularPrecio ()
  	}
 
  	precioDescuento.value=importe;
-
 
 }
