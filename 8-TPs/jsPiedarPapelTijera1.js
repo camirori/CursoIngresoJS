@@ -24,7 +24,7 @@ function piedra()
 	{
 		alert("Empató");
 	}
-	else if (nueleccionMaquinaero==2)
+	else if (eleccionMaquina==2)
 	{
 		alert("Perdió");
 	}
@@ -32,6 +32,7 @@ function piedra()
 	{
 		alert("Ganó!!");
 	}
+	comenzar();
 
 }//FIN DE LA FUNCIÓN
 function papel()
@@ -48,6 +49,7 @@ function papel()
 	{
 		alert("Perdió");
 	}
+	comenzar();
 
 }//FIN DE LA FUNCIÓN
 function tijera()
@@ -64,4 +66,5 @@ function tijera()
 	{
 		alert("Empató");
 	}
+	comenzar();
 }//FIN DE LA FUNCIÓN
