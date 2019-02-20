@@ -8,18 +8,14 @@ function mostrar()
 
 	switch(horaIngresada)
 	{
-
-
 		case 6:
 		case 7:
 		case 8:
 		case 9:
 		case 10:
 		case 11:
-		{
 			alert("Es de mañana");
 			break;
-		}
 		case 12:
 		case 13:
 		case 14:
@@ -28,10 +24,8 @@ function mostrar()
 		case 17:
 		case 18:
 		case 19:
-		{
 			alert("Es de tarde");
 			break;
-		}
 		case 20:
 		case 21:
 		case 22:
@@ -42,18 +36,14 @@ function mostrar()
 		case 3:
 		case 4:
 		case 5:
-		{
 			alert("Es de noche");
 			if(horaIngresada<24&&horaIngresada>19)
 			{
 				alert("A dormir");
 			}
 			break;
-		}	
 		default:
-		{
 			alert("La hora no es válida");
 			break;
-		}
 	}
 }
