@@ -1,6 +1,6 @@
 function mostrar()
 {
-
+	/*
 	var respuesta;
 	var primerNumeroIngresado;
 	var segundoNumeroIngresado;
@@ -32,5 +32,40 @@ function mostrar()
 			alert("La suma es "+respuesta);
 		}
 		
+	}*/
+
+	var numeroIngresado;
+	var contadorIngresados=0;
+	var suma=0;
+
+	while(contadorIngresados<4)
+	{
+		numeroIngresado=prompt("Ingrese un numero");
+		numeroIngresado=parseInt(numeroIngresado);
+		suma+=numeroIngresado;
+		contadorIngresados++;
 	}
+
+	if (suma>100) 
+	{
+		suma*=0.9;
+		suma=parseInt(suma);
+		alert("El importe final es "+suma);
+	}
+	else if(suma>50)
+	{
+		suma*=0.95;
+		suma=parseInt(suma);
+		alert("El importe final es "+suma);
+	}
+	else
+	{
+		suma*=1.15;
+		suma=parseInt(suma);
+		alert("El importe final es "+suma);
+	}
+
+
+
+
 }
