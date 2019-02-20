@@ -37,7 +37,7 @@ function mostrar()
 		case 4:
 		case 5:
 			alert("Es de noche");
-			if(horaIngresada<24)
+			if(horaIngresada<24&&horaIngresada>19)
 			{
 				alert("A dormir");
 			}
