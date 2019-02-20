@@ -36,10 +36,13 @@ function mostrar()
 		case 3:
 		case 4:
 		case 5:
-			alert("Es de noche");
 			if(horaIngresada<24&&horaIngresada>19)
 			{
-				alert("A dormir");
+				alert("Es de noche. A dormir");
+			}
+			else
+			{
+				alert("Es de noche");
 			}
 			break;
 		default:
