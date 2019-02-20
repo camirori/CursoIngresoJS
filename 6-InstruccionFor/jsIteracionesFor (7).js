@@ -7,6 +7,8 @@ function mostrar()
 	numeroIngresado=prompt("Ingrese un número");
 	numeroIngresado=parseInt(numeroIngresado);
 
+	document.write("Divisores: ");
+
 	for(divisores=1; divisores<=numeroIngresado; divisores++)
 	{
 		if(numeroIngresado%divisores==0)
@@ -17,7 +19,6 @@ function mostrar()
 	}
 
 	document.write("cantidad de divisores: "+contadorDivisores);
-
 
 
 }//FIN DE LA FUNCIÓN
