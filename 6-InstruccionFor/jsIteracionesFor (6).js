@@ -2,23 +2,17 @@ function mostrar()
 {
 	var numeroIngresado;
 	var pares;
-	var contadorPares;
+	var contadorPares=0;
 
 	numeroIngresado=prompt("Ingrese un numero");
 	numeroIngresado=parseInt(numeroIngresado);
 
-	for(pares=2;true;pares++2)
+	for(pares=2;pares<=numeroIngresado;pares+=2)
 	{
 		contadorPares++;
-		document.write(pares+", "," cantidad de pares "+contadorPares);
-		if (numeroIngresado<pares) 
-		{
-			break;
-		}
-
+		document.write(pares+",");
 	}
 
-
-
+	document.write(" cantidad de pares: "+contadorPares);
 
 }//FIN DE LA FUNCIÓN
