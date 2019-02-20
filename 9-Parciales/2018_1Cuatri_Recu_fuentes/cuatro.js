@@ -34,38 +34,81 @@ function mostrar()
 		
 	}*/
 
-	var numeroIngresado;
-	var contadorIngresados=0;
-	var suma=0;
+	var primerNumeroIngresado;
+	var segundoNumeroIngresado;
+	var tercerNumeroIngresado;
+	var cuartoNumeroIngresado;
+	//var contadorIngresados=0;
+	var suma;
+	var mayor;
+	var porcentaje;
+	var importe;
 
+
+	primerNumeroIngresado=prompt("Ingrese un numero");
+	segundoNumeroIngresado=prompt("Ingrese un numero");
+	tercerNumeroIngresado=prompt("Ingrese un numero");
+	cuartoNumeroIngresado=prompt("Ingrese un numero");
+	
+
+	primerNumeroIngresado=parseInt(primerNumeroIngresado);
+	segundoNumeroIngresado=parseInt(segundoNumeroIngresado);
+	tercerNumeroIngresado=parseInt(tercerNumeroIngresado);
+	cuartoNumeroIngresado=parseInt(cuartoNumeroIngresado);
+
+	suma=primerNumeroIngresado+segundoNumeroIngresado+tercerNumeroIngresado+cuartoNumeroIngresado;
+
+	/*
 	while(contadorIngresados<4)
 	{
 		numeroIngresado=prompt("Ingrese un numero");
 		numeroIngresado=parseInt(numeroIngresado);
 		suma+=numeroIngresado;
 		contadorIngresados++;
+	}*/
+
+	if(primerNumeroIngresado>segundoNumeroIngresado&&primerNumeroIngresado>tercerNumeroIngresado&&primerNumeroIngresado>cuartoNumeroIngresado)
+	{
+		mayor=primerNumeroIngresado;
+	}
+	else
+	{
+		if (segundoNumeroIngresado>primerNumeroIngresado&&segundoNumeroIngresado>tercerNumeroIngresado&&segundoNumeroIngresado>cuartoNumeroIngresado) 
+		{
+			mayor=segundoNumeroIngresado;
+		}
+		else
+		{
+			if (tercerNumeroIngresado>primerNumeroIngresado&&tercerNumeroIngresado>segundoNumeroIngresado&&tercerNumeroIngresado>cuartoNumeroIngresado) 
+			{
+				mayor=tercerNumeroIngresado;
+			}
+			else
+			{
+				mayor=cuartoNumeroIngresado;
+			}
+		}
 	}
 
 	if (suma>100) 
 	{
-		suma*=0.9;
-		suma=parseInt(suma);
-		alert("El importe final es "+suma);
+		porcentaje=0.9;
+
 	}
 	else if(suma>50)
 	{
-		suma*=0.95;
-		suma=parseInt(suma);
-		alert("El importe final es "+suma);
+		porcentaje=0.95;
 	}
 	else
 	{
-		suma*=1.15;
-		suma=parseInt(suma);
-		alert("El importe final es "+suma);
+		porcentaje=1.15;
 	}
 
+importe=suma*porcentaje;
+importe=parseInt(importe);
+mayor=Math.max(primerNumeroIngresado, segundoNumeroIngresado, tercerNumeroIngresado, cuartoNumeroIngresado);
 
+alert("El numero mayor es "+mayor+". El importe final es "+importe);
 
 
 }
