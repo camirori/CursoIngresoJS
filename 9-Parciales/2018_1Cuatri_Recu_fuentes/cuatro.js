@@ -106,7 +106,7 @@ function mostrar()
 
 importe=suma*porcentaje;
 importe=parseInt(importe);
-mayor=Math.max(primerNumeroIngresado, segundoNumeroIngresado, tercerNumeroIngresado, cuartoNumeroIngresado);
+//mayor=Math.max(primerNumeroIngresado, segundoNumeroIngresado, tercerNumeroIngresado, cuartoNumeroIngresado);
 
 alert("El numero mayor es "+mayor+". El importe final es "+importe);
 
