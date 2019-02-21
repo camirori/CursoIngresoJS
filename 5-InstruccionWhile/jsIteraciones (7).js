@@ -5,18 +5,18 @@ function mostrar()
 	var acumulador=0;
 	var respuesta='si';
 
-	while(true)
+	while(respuesta=='si')
 	{
-		respuesta=prompt("Desea ingresar otro nùmero? si / no");
-		if(respuesta=="no")
+		
+		/*if(respuesta=="no")
 		{
 			break;
-		}
+		}*/
 		numeroIngresado=prompt("Indicar un nùmero");
 		numeroIngresado=parseInt(numeroIngresado);
-		acumulador=acumulador+numeroIngresado;
-		contador++
-
+		acumulador+=numeroIngresado;
+		contador++;
+		respuesta=prompt("Desea ingresar otro nùmero? si / no");
 	}
 
 document.getElementById('suma').value=acumulador;
