@@ -73,13 +73,13 @@ function mostrar()
 	}
 	else
 	{
-		if (segundoNumeroIngresado>primerNumeroIngresado&&segundoNumeroIngresado>tercerNumeroIngresado&&segundoNumeroIngresado>cuartoNumeroIngresado) 
+		if (segundoNumeroIngresado>tercerNumeroIngresado&&segundoNumeroIngresado>cuartoNumeroIngresado) 
 		{
 			mayor=segundoNumeroIngresado;
 		}
 		else
 		{
-			if (tercerNumeroIngresado>primerNumeroIngresado&&tercerNumeroIngresado>segundoNumeroIngresado&&tercerNumeroIngresado>cuartoNumeroIngresado) 
+			if (tercerNumeroIngresado>cuartoNumeroIngresado) 
 			{
 				mayor=tercerNumeroIngresado;
 			}
