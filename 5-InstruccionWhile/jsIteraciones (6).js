@@ -10,8 +10,8 @@ function mostrar()
 	{
 		numeroIngresado=prompt("Indicar un nùmero");
 		numeroIngresado=parseInt(numeroIngresado);
-		acumulador=acumulador+numeroIngresado;
-		contador++
+		acumulador+=numeroIngresado;
+		contador++;
 	}
 
 
