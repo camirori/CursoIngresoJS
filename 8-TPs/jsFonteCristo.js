@@ -9,5 +9,29 @@ e.	Se pedirán un número positivo y se mostrará la cantidad de números Primos
 */
 function ComenzarIngreso () 
 {
+ 	var numeroIngresado;
+ 	var pares;
+ 	var contadorPares;
+ 	var contadorImpares;
+ 	var impares;
+ 	var contadorDivisores;
+ 	var primo;
+ 	var contadorPrimos;
+
+ 	numeroIngresado=numero.value;
+ 	numeroIngresado=parseInt(numeroIngresado);
+
+	for(pares=0,contadorPares=0;pares<=numeroIngresado;pares+=2)
+ 	{
+ 		contadorPares++;
+ 	}
+ 	alert(contadorPares);
+
+	for(impares=1,contadorImpares=0;impares<=numeroIngresado;impares+=2)
+ 	{
+ 		contadorImpares++;
+ 	}
+ 	alert(contadorImpares);
  	
+
 }
