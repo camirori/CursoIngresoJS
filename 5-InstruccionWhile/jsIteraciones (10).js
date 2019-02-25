@@ -39,7 +39,7 @@ function mostrar()
 		{
 			cantidadCeros++;
 		}
-		if(numeroIngresado/2==0)
+		if(numeroIngresado%2==0)
 		{
 			cantidadPares++;
 		}
