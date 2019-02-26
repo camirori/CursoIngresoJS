@@ -6,7 +6,7 @@ function mostrar()
 	var promedio=0;
 	var notaMinima;
 	var sexoNotaMinima;
-	var contadorMayor=0;
+	var contadorMayorSeis=0;
 
 
 	for(contadorIngreso=0;contadorIngreso<5;contadorIngreso++)
@@ -37,13 +37,13 @@ function mostrar()
 		//La cantidad de varones que su nota haya sido mayor o igual a 6
 		if(notaIngresada>5&&sexoIngresado=="m")
 		{
-			contadorMayor++;
+			contadorMayorSeis++;
 		}
 	}
 
 promedio/=contadorIngreso;
 
-alert("Promedio: "+promedio+". La nota mas baja es "+notaMinima+" y el sexo de esa persona es "+sexoNotaMinima+". La contidad de varones cuya nota ha sido mayor o igual a 6 es "+contadorMayor);
+alert("Promedio: "+promedio+". La nota mas baja es "+notaMinima+" y el sexo de esa persona es "+sexoNotaMinima+". La contidad de varones cuya nota ha sido mayor o igual a 6 es "+contadorMayorSeis);
 
 
 
