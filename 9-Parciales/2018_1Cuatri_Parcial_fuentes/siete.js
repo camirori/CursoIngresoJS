@@ -11,9 +11,10 @@ function mostrar()
 
 	for(contadorIngreso=0;contadorIngreso<5;contadorIngreso++)
 	{
+		//Pido nota y sexo
 		notaIngresada=prompt("Ingrese una nota entre 0 y 10");
 		notaIngresada=parseInt(notaIngresada);
-		while(notaIngresada<0||notaIngresada>10)
+		while( isNaN(notaIngresada) || notaIngresada<0||notaIngresada>10)
 		{
 			notaIngresada=prompt("La informacion ingresada no es valida.\nIngrese una nota entre 0 y 10");
 			notaIngresada=parseInt(notaIngresada);
@@ -27,11 +28,13 @@ function mostrar()
 
 		promedio+=notaIngresada;
 
+		//La nota más baja y el sexo de esa persona
 		if (notaIngresada<notaMinima||notaMinima==undefined) 
 		{
 			notaMinima=notaIngresada;
 			sexoNotaMinima=sexoIngresado;
 		}
+		//La cantidad de varones que su nota haya sido mayor o igual a 6
 		if(notaIngresada>5&&sexoIngresado=="m")
 		{
 			contadorMayor++;
