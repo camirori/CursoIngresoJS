@@ -79,5 +79,11 @@ function mostrar()
 
 	promedioPositivos=acumuladorPositivos/contadorPositivos;
 
-	document.write("Cantidad de numeros pares: "+contadorPares,"<br>Cantidad de números impares: "+contadorImpares,"<br>Cantidad de ceros: "+contadorCeros,"<br>Promedio positivos: "+promedioPositivos,"<br>Suma negativos: "+sumaNegativos,"<br>Numero y letra maximo: "+maximo+letraMaximo,"<br>Numero y letra minimo: "+minimo+letraMinimo);
+	document.write("Cantidad de numeros pares: "+contadorPares,
+					"<br>Cantidad de números impares: "+contadorImpares,
+					"<br>Cantidad de ceros: "+contadorCeros,
+					"<br>Promedio positivos: "+promedioPositivos,
+					"<br>Suma negativos: "+sumaNegativos,
+					"<br>Numero y letra maximo: "+maximo+letraMaximo,
+					"<br>Numero y letra minimo: "+minimo+letraMinimo);
 }
