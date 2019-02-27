@@ -41,7 +41,7 @@ function mostrar()
 		}
 		else
 		{
-			if(numeroIngresado=0)
+			if(numeroIngresado==0)
 			{
 				contadorCeros++;
 			}
