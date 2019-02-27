@@ -12,8 +12,8 @@ function mostrar()
 	var pesoMaximo;
 	var animalPesoMaximo;
 	var temperaturaPesoMaximo;
-	var pesoMaximoTemperaturaMenorCero;
-	var pesoMinimoTemperaturaMenorCero;
+	var pesoMaximoTemperaturaMenorCero=0;
+	var pesoMinimoTemperaturaMenorCero=0;
 
 
 	while(respuesta=="si")
@@ -56,10 +56,13 @@ function mostrar()
 			pesoMaximo=pesoIngresado;
 			temperaturaPesoMaximo=temperaturaIngresada;
 			animalPesoMaximo=animalIngresado;
-		}	
+		}			
+
+		// c) La cantidad de animales que viven a menos de 0 grados
 		// f) El peso máximo y el mínimo de todos los animales cuyas temperaturas sean bajo cero.
 		if(temperaturaIngresada<0)
 		{
+			contadorTemperaturaMenorCero++;
 			if(pesoIngresado>pesoMaximoTemperaturaMenorCero||pesoMaximoTemperaturaMenorCero==undefined)
 			{
 				pesoMaximoTemperaturaMenorCero=pesoIngresado;
@@ -69,13 +72,7 @@ function mostrar()
 				pesoMinimoTemperaturaMenorCero=pesoIngresado;
 			}
 		}
-		
-
-		// c) La cantidad de animales que viven a menos de 0 grados
-		if(temperaturaIngresada<0)
-		{
-			contadorTemperaturaMenorCero++;
-		}
+	
 
 		//  d) El promedio del peso de todos los animales
 		acumuladorPeso+=pesoIngresado;
@@ -86,9 +83,9 @@ function mostrar()
 	promedioPeso=acumuladorPeso/contadorAnimales;
 
 	document.write("Cantidad de temperaturas pares: "+contadorTemperaturaPar,
-					"<br>Marca del producto más pesado: "+marcaPesoMaximo,
+					"<br>Nombre y temperatura del animal más pesado: "+animalPesoMaximo+" "+temperaturaPesoMaximo,
 					"<br>Cantidad de productos que se conservan a menos de 0 grados: "+contadorTemperaturaMenorCero,
-					"<br>Promedio del peso de todos los productos: "+promedioPeso,
-					"<br>Peso máximo: "+pesoMaximo,
-					"<br>Peso minimo: "+pesoMinimo);
+					"<br>Promedio del peso de todos los animales: "+promedioPeso,
+					"<br>Peso máximo de todos los animales cuyas temperaturas sean bajo cero: "+pesoMaximoTemperaturaMenorCero,
+					"<br>Peso minimo de todos los animales cuyas temperaturas sean bajo cero: "+pesoMinimoTemperaturaMenorCero);
 }
