@@ -6,7 +6,8 @@ function mostrar()
 	var contadorPares=0;
 	var contadorImpares=0;
 	var contadorCeros=0;
-	var promedioPositivos=0;
+	var promedioPositivos;
+	var acumuladorPositivos=0;
 	var contadorPositivos=0;
 	var sumaNegativos=0;
 	var maximo;
@@ -16,6 +17,7 @@ function mostrar()
 
 	while(respuesta=="si")
 	{
+		//pido número y letra
 		numeroIngresado=prompt("Ingrese un número entre -100 y 100");
 		numeroIngresado=parseInt(numeroIngresado);
 		while(isNaN(numeroIngresado) || numeroIngresado<-100||numeroIngresado>100)
@@ -32,6 +34,7 @@ function mostrar()
 
 		respuesta=prompt("Ingrese 'si' para ingresar otro dato");
 
+		//Cantidad de numeros pares, impares y ceros
 		if(numeroIngresado%2==0)
 		{
 			contadorPares++;
@@ -47,15 +50,19 @@ function mostrar()
 				contadorImpares++;
 			}	
 		}
+
+		// d)Promedio positivos e) suma negativos
 		if(numeroIngresado>0)
 		{
-			promedioPositivos+=numeroIngresado;
+			acumuladorPositivos+=numeroIngresado;
 			contadorPositivos++;
 		}
 		else(numeroIngresado)
 		{
 			sumaNegativos+=numeroIngresado;
 		}
+
+		// f) El número y la letra del máximo y el mínimo.
 		if(numeroIngresado>maximo||maximo==undefined)
 		{
 			maximo=numeroIngresado;
@@ -70,7 +77,7 @@ function mostrar()
 
 	}
 
-	promedioPositivos/=contadorPositivos;
+	promedioPositivos=acumuladorPositivos/contadorPositivos;
 
-	document.write("Cantidad de numeros pares: "+contadorPares," cantidad de números impares: "+contadorImpares,"Cantidad de ceros: "+contadorCeros,"Promedio positivos: "+promedioPositivos,"Suma negativos: "+sumaNegativos,"Numero y letra maximo: "+maximo+letraMaximo,"Numero y letra minimo: "+minimo+letraMinimo);
+	document.write("Cantidad de numeros pares: "+contadorPares,"<br>Cantidad de números impares: "+contadorImpares,"<br>Cantidad de ceros: "+contadorCeros,"<br>Promedio positivos: "+promedioPositivos,"<br>Suma negativos: "+sumaNegativos,"<br>Numero y letra maximo: "+maximo+letraMaximo,"<br>Numero y letra minimo: "+minimo+letraMinimo);
 }
