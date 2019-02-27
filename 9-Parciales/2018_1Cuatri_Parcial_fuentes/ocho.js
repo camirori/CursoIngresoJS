@@ -41,15 +41,13 @@ function mostrar()
 		}
 		else
 		{
-			if(numeroIngresado==0)
-			{
-				contadorCeros++;
-			}
-			else
-			{
-				contadorImpares++;
-			}	
+			contadorImpares++;
+		}	
+		if(numeroIngresado==0)
+		{
+			contadorCeros++;
 		}
+		
 
 		// d)Promedio positivos e) suma negativos
 		if(numeroIngresado>0)
