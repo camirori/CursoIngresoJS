@@ -1,5 +1,6 @@
 function mostrar()
 {
+	/*
 
 	var miArray = new Array();
 
@@ -21,6 +22,41 @@ document.write("El contenido del vector es: <br>");
 
 		document.write("Posicion "+i+"-->"+miArray[i]+"<br>");
 	}
+	*/
+	var palabra=prompt("Ingrese una palabra");
+	var acumuladorPalabra="";
+	var acumuladorPalabraInvertida="";
+
+	for(i=0;i<palabra.length;i++)
+	{
+		if(palabra[i]==" ")
+		{
+			continue;
+		}
+		acumuladorPalabra+=palabra[i];
+		//console.log(palabra[i]+i);
+	}
+	console.log(acumuladorPalabra);
+
+	for(i=palabra.length-1;i>=0;i--)
+	{
+		if(palabra[i]==" ")
+		{
+			continue;
+		}
+		acumuladorPalabraInvertida+=palabra[i];
+		//console.log(palabra[i]+i);
+	}
+	console.log(acumuladorPalabraInvertida);
+
+	if(acumuladorPalabra==acumuladorPalabraInvertida)
+	{
+		console.log("Es un palindromo");
+	}else 
+	{
+		console.log("No es un palindromo");
+	}
+
 
 
 
