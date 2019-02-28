@@ -12,8 +12,8 @@ function mostrar()
 	var pesoMaximo;
 	var animalPesoMaximo;
 	var temperaturaPesoMaximo;
-	var pesoMaximoTemperaturaMenorCero=0;
-	var pesoMinimoTemperaturaMenorCero=0;
+	var pesoMaximoTemperaturaMenorCero;
+	var pesoMinimoTemperaturaMenorCero;
 
 
 	while(respuesta=="si")
@@ -81,10 +81,11 @@ function mostrar()
 	}
 
 	promedioPeso=acumuladorPeso/contadorAnimales;
+	promedioPeso=parseInt(promedioPeso);
 
 	document.write("Cantidad de temperaturas pares: "+contadorTemperaturaPar,
 					"<br>Nombre y temperatura del animal más pesado: "+animalPesoMaximo+" "+temperaturaPesoMaximo,
-					"<br>Cantidad de productos que se conservan a menos de 0 grados: "+contadorTemperaturaMenorCero,
+					"<br>Cantidad de animales que viven a menos de 0 grados: "+contadorTemperaturaMenorCero,
 					"<br>Promedio del peso de todos los animales: "+promedioPeso,
 					"<br>Peso máximo de todos los animales cuyas temperaturas sean bajo cero: "+pesoMaximoTemperaturaMenorCero,
 					"<br>Peso minimo de todos los animales cuyas temperaturas sean bajo cero: "+pesoMinimoTemperaturaMenorCero);
